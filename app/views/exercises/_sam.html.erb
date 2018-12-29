@@ -1,0 +1,28 @@
+
+<%= form_for :exercise, url: {action: "create"} do |f| %>
+  Valence
+  <%= f.radio_button :valence, "1" %>
+  <%= f.radio_button :valence, "2" %>
+  <%= f.radio_button :valence, "3" %>
+  <%= f.radio_button :valence, "4" %>
+  <%= f.radio_button :valence, "5" %>
+  <%= f.radio_button :valence, "6" %>
+  <%= f.radio_button :valence, "7" %>
+  <%= f.radio_button :valence, "8" %>
+  <%= f.radio_button :valence, "9" %>
+  Arousal
+  <%= f.radio_button :arousal, "1" %>
+  <%= f.radio_button :arousal, "2" %>
+  <%= f.radio_button :arousal, "3" %>
+  <%= f.radio_button :arousal, "4" %>
+  <%= f.radio_button :arousal, "5" %>
+  <%= f.radio_button :arousal, "6" %>
+  <%= f.radio_button :arousal, "7" %>
+  <%= f.radio_button :arousal, "8" %>
+  <%= f.radio_button :arousal, "9" %>
+
+  <%= f.hidden_field(:exercise_type) %>
+  <%= f.hidden_field(:video_id) %>
+
+  <%= f.submit "Submit" %>
+<% end %>

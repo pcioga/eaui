@@ -1,0 +1,16 @@
+
+<%= form_for :exercise, url: {action: "create"} do |f| %>
+  <% if current_user.id.even?%>
+  <%= f.text_field(:suggested_emotion) %>
+  <% end %>
+
+  <%= f.range_field :arousal, :min=>0, :max=>200, :class=>"slide", :id=>"slider1"%>
+
+  <%= f.range_field :valence, :min=>0, :max=>200, :class=>"slide", :id=>"slider1"%>
+
+
+  <%= f.hidden_field(:exercise_type) %>
+  <%= f.hidden_field(:video_id) %>
+
+  <%= f.submit "Submit" %>
+<% end %>
