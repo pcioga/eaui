@@ -1,3 +1,7 @@
-<h1>Video3</h1>
-<iframe src="https://player.vimeo.com/video/306808985" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<%= link_to "Next", controller: "exercises", action: "exercise3", exercise_type: @exercise.exercise_type %>
+<div class="container h-100 d-flex justify-content-center mt-5">
+  <div class="my-auto">
+    <iframe src="https://player.vimeo.com/video/306808985" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <br>
+    <%= link_to "Next", controller: "exercises", action: "exercise3", exercise_type: @exercise.exercise_type %>
+  </div>
+</div>

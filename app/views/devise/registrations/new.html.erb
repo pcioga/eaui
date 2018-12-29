@@ -1,62 +1,66 @@
-<h2>Sign up</h2>
+<div class="container h-100 d-flex justify-content-center mt-5">
+  <div class="my-auto">
+    <h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <div class="field mt-3">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      </div>
+
+       <div class="field">
+        <%= f.label :age %><br />
+        <%= f.text_field :age %>
+      </div>
+
+      <div class="field mt-3">
+        <%= f.label :gender %><br />
+        <%= f.radio_button :gender, "Male" %>
+        <%= f.label :gender, 'Male', :value => 'Male' %>
+        <%= f.radio_button :gender, "Female" %>
+        <%= f.label :gender, 'Female', :value => 'Female' %>
+        <%= f.radio_button :gender, "Other" %>
+        <%= f.label :gender, 'Other', :value => 'Other' %>
+      </div>
+
+      <div class="field mt-3">
+        <%= f.label :country, "Current Country" %><br />
+        <%= f.country_select :country %>
+      </div>
+
+      <div class="field mt-3">
+        <%= f.label :english_p, "English Proficiency" %><br />
+        <%= f.radio_button :english_p, "Very low" %>
+        <%= f.label :english_p, 'Very low', :value => 'Very low' %>
+        <%= f.radio_button :english_p, "Low" %>
+        <%= f.label :english_p, 'Low', :value => 'Low' %>
+        <%= f.radio_button :english_p, "Moderate" %>
+        <%= f.label :english_p, 'Moderate', :value => 'Moderate' %>
+        <%= f.radio_button :english_p, "High" %>
+        <%= f.label :english_p, 'High', :value => 'High' %>
+        <%= f.radio_button :english_p, "Very high" %>
+        <%= f.label :english_p, 'Very high', :value => 'Very high' %>
+      </div>
+
+      <div class="actions mt-3">
+        <%= f.submit "Sign up" %>
+      </div>
+    <% end %>
   </div>
+</div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-   <div class="field">
-    <%= f.label :age %><br />
-    <%= f.text_field :age %>
-  </div>
-
-  <div class="field">
-    <%= f.label :gender %><br />
-    <%= f.radio_button :gender, "Male" %>
-    <%= f.label :gender, 'Male', :value => 'Male' %>
-    <%= f.radio_button :gender, "Female" %>
-    <%= f.label :gender, 'Female', :value => 'Female' %>
-    <%= f.radio_button :gender, "Other" %>
-    <%= f.label :gender, 'Other', :value => 'Other' %>
-  </div>
-
-  <div class="field">
-    <%= f.country_select :country %>
-  </div>
-
-  <div class="field">
-    <%= f.label :english_p %><br />
-    <%= f.radio_button :english_p, "Very low" %>
-    <%= f.label :english_p, 'Very low', :value => 'Very low' %>
-    <%= f.radio_button :english_p, "Low" %>
-    <%= f.label :english_p, 'Low', :value => 'Low' %>
-    <%= f.radio_button :english_p, "Moderate" %>
-    <%= f.label :english_p, 'Moderate', :value => 'Moderate' %>
-    <%= f.radio_button :english_p, "High" %>
-    <%= f.label :english_p, 'High', :value => 'High' %>
-    <%= f.radio_button :english_p, "Very high" %>
-    <%= f.label :english_p, 'Very high', :value => 'Very high' %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>

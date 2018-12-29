@@ -1,0 +1,20 @@
+<div class="container h-100 d-flex justify-content-center mt-5">
+  <div class="my-auto">
+    <h2>Usability Survey</h2>
+
+    <p>I thought this user interface to assess emotional states was easy to use:</p>
+
+    <%= form_for :survey, url: {action: "create"} do |f| %>
+      Strongly disagree
+      <%= f.radio_button :points, "1" %>
+      <%= f.radio_button :points, "2" %>
+      <%= f.radio_button :points, "3" %>
+      <%= f.radio_button :points, "4" %>
+      <%= f.radio_button :points, "5" %>
+      Strongly agree
+      <br>
+      <br>
+      <%= f.submit "Submit" %>
+    <% end %>
+  </div>
+</div>

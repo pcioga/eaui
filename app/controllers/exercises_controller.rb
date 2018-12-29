@@ -43,13 +43,14 @@ class ExercisesController < ApplicationController
     @exercise = Exercise.new(exercise_params)
     @exercise.user_id = 1
     if @exercise.save
-      redirect_to controller: 'exercises', action: "video#{@exercise.video_id+1}", exercise_type: @exercise.exercise_type
+      #redirect_to controller: 'exercises', action: "video#{@exercise.video_id+1}", exercise_type: @exercise.exercise_type
+      redirect_to controller: 'surveys', action:'new'
     else
       render :video3
     end
   end
 
   def exercise_params
-    params.require(:exercise).permit(:arousal, :valence, :video_id, :exercise_type, :user_id)
+    params.require(:exercise).permit(:arousal, :valence, :video_id, :exercise_type, :user_id, :suggested_emotion)
   end
 end

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  
+  get '/home/instructions', to: 'home#instructions'
+  get '/home/final', to: 'home#final'
+
   devise_scope :user do
     authenticated :user do
       root 'home#index', as: :authenticated_root
@@ -11,6 +13,9 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :survey
+  get 'new', action: :new, controller: 'surveys'
+  post 'create', action: :create, controller: 'surveys'
   resources :exercises
   get 'video1', action: :video1, controller: 'exercises'
   get 'video2', action: :video2, controller: 'exercises'

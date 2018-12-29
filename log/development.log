@@ -9550,3 +9550,1734 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 575ms (Views: 556.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2018-12-29 13:44:32 +0000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (196.5ms)
+Completed 200 OK in 539ms (Views: 510.2ms | ActiveRecord: 5.6ms)
+
+
+Started POST "/users" for ::1 at 2018-12-29 13:44:45 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s9zROcNtKiUJq2ZIWN3HLXw4wCCJVjscACmy5bruQstHn3x4/GQ6wS0kuYRtegFCibNp4tcEJXZnrCtr5JKEKA==", "user"=>{"email"=>"ze@mail", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"12", "gender"=>"Other", "country"=>"AF", "english_p"=>"Low"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ze@mail"], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "gender", "age", "country", "english_p") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "ze@mail"], ["encrypted_password", "$2a$11$dC0SbiIy8qslzTWnOB33E.WeDH/hamLVljZmKBrxEMLbVvOQtz5PK"], ["created_at", "2018-12-29 13:44:45.846106"], ["updated_at", "2018-12-29 13:44:45.846106"], ["gender", "Other"], ["age", 12], ["country", "AF"], ["english_p", 0]]
+  [1m[35m (79.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3003/
+Completed 302 Found in 319ms (ActiveRecord: 82.4ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:44:45 +0000
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 102ms (Views: 93.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:45:21 +0000
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 70ms (Views: 68.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:47:35 +0000
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 66ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:47:51 +0000
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 71ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:48:47 +0000
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 96ms (Views: 92.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:50:36 +0000
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 77ms (Views: 75.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:50:54 +0000
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 81ms (Views: 78.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:51:07 +0000
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 88ms (Views: 85.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:51:22 +0000
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 66ms (Views: 64.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:51:26 +0000
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 60ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:51:46 +0000
+  [1m[36mUser Load (15.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 132ms (Views: 128.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:51:53 +0000
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 108ms (Views: 103.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:52:02 +0000
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 82ms (Views: 79.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:52:17 +0000
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 83ms (Views: 79.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:52:22 +0000
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:52:28 +0000
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 78ms (Views: 74.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:52:31 +0000
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 70ms (Views: 67.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:52:34 +0000
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 59ms (Views: 56.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:52:37 +0000
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 86ms (Views: 82.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:52:37 +0000
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 77ms (Views: 74.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:52:38 +0000
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 110ms (Views: 106.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:52:48 +0000
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 58ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:52:50 +0000
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 81ms (Views: 79.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:53:13 +0000
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/pedrocioga/Documents/workspace/eaui/app/views/home/index.html.erb:12: syntax error, unexpected '='
+ses", action: "video3", class="center" );@output_buffer.safe
+                              ^):
+  
+app/views/home/index.html.erb:12: syntax error, unexpected '='
+Started GET "/" for ::1 at 2018-12-29 13:53:53 +0000
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 62ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 13:54:03 +0000
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 119ms (Views: 116.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video3?class=align-center" for ::1 at 2018-12-29 13:55:23 +0000
+Processing by ExercisesController#video3 as HTML
+  Parameters: {"class"=>"align-center"}
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 138ms (Views: 73.6ms | ActiveRecord: 20.9ms)
+
+
+Started GET "/video3?class=align-center" for ::1 at 2018-12-29 13:55:29 +0000
+Processing by ExercisesController#video3 as HTML
+  Parameters: {"class"=>"align-center"}
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 63ms (Views: 58.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video3?class=align-center" for ::1 at 2018-12-29 13:55:47 +0000
+Processing by ExercisesController#video3 as HTML
+  Parameters: {"class"=>"align-center"}
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 163ms (Views: 158.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video3?class=align-center" for ::1 at 2018-12-29 13:55:55 +0000
+Processing by ExercisesController#video3 as HTML
+  Parameters: {"class"=>"align-center"}
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 93ms (Views: 88.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video3?class=align-center" for ::1 at 2018-12-29 13:57:31 +0000
+Processing by ExercisesController#video3 as HTML
+  Parameters: {"class"=>"align-center"}
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 84ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video3?class=align-center" for ::1 at 2018-12-29 13:58:04 +0000
+Processing by ExercisesController#video3 as HTML
+  Parameters: {"class"=>"align-center"}
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 66ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video3?class=align-center" for ::1 at 2018-12-29 13:59:04 +0000
+Processing by ExercisesController#video3 as HTML
+  Parameters: {"class"=>"align-center"}
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 65ms (Views: 60.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video3?class=align-center" for ::1 at 2018-12-29 14:00:14 +0000
+Processing by ExercisesController#video3 as HTML
+  Parameters: {"class"=>"align-center"}
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 65ms (Views: 62.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video3?class=align-center" for ::1 at 2018-12-29 14:00:31 +0000
+Processing by ExercisesController#video3 as HTML
+  Parameters: {"class"=>"align-center"}
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 64ms (Views: 61.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video3?class=align-center" for ::1 at 2018-12-29 14:00:46 +0000
+Processing by ExercisesController#video3 as HTML
+  Parameters: {"class"=>"align-center"}
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 75ms (Views: 70.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 14:00:52 +0000
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 70ms (Views: 67.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 14:01:21 +0000
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 106ms (Views: 101.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 14:03:14 +0000
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 75ms (Views: 71.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video3?class=align-center" for ::1 at 2018-12-29 14:03:18 +0000
+Processing by ExercisesController#video3 as HTML
+  Parameters: {"class"=>"align-center"}
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 91ms (Views: 86.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 14:03:56 +0000
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 77ms (Views: 75.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video3" for ::1 at 2018-12-29 14:04:01 +0000
+Processing by ExercisesController#video3 as HTML
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 95ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 14:04:18 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (44.4ms)
+Completed 200 OK in 148ms (Views: 147.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 14:04:27 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered exercises/_pme.html.erb (55.5ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (61.6ms)
+Completed 200 OK in 166ms (Views: 162.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 14:07:32 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (1.6ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 64ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 14:07:55 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (1.5ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 69ms (Views: 67.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 14:08:23 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (2.4ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 97ms (Views: 95.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 14:08:51 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (2.6ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 132ms (Views: 130.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 19:09:29 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (9.5ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 174ms (Views: 173.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 19:09:43 +0000
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 80ms (Views: 76.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video3" for ::1 at 2018-12-29 19:10:38 +0000
+Processing by ExercisesController#video3 as HTML
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 90ms (Views: 84.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 19:10:55 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (3.0ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 87ms (Views: 85.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for ::1 at 2018-12-29 19:11:33 +0000
+Processing by ExercisesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EXkjZSgy5FLfM7cm9gi1uOtHTCSa977I6HlHbbWYuH7dg/1bEFe05b1XdDpPg3A/MjOpqHVBmOFXUXMQ1qPLOg==", "exercise"=>{"suggested_emotion"=>"lol", "arousal"=>"200", "valence"=>"0", "exercise_type"=>"pme", "video_id"=>"3"}, "commit"=>"Submit"}
+Unpermitted parameter: :suggested_emotion
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (3.7ms)[0m  [1m[32mINSERT INTO "exercises" ("user_id", "exercise_type", "valence", "arousal", "video_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["exercise_type", "pme"], ["valence", 0], ["arousal", 200], ["video_id", 3]]
+  [1m[35m (38.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3003/video4?exercise_type=pme
+Completed 302 Found in 69ms (ActiveRecord: 43.2ms)
+
+
+Started GET "/video4?exercise_type=pme" for ::1 at 2018-12-29 19:11:33 +0000
+Processing by ExercisesController#video4 as HTML
+  Parameters: {"exercise_type"=>"pme"}
+  Rendering exercises/video4.html.erb within layouts/application
+  Rendered exercises/video4.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 61ms (Views: 57.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" ORDER BY "exercises"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "exercises"."suggested_emotion" FROM "exercises"[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercises"[0m
+Started GET "/exercise3" for ::1 at 2018-12-29 19:15:48 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (2.3ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 88ms (Views: 86.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 19:15:55 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (1.7ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 76ms (Views: 74.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for ::1 at 2018-12-29 19:16:03 +0000
+Processing by ExercisesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NJCOIHm0y2+GkxO7CDYjhZ2S35L0t8o6r2pVU45m7eHA0yNhRr3bi6IczHc9keXqaBl2UKrl1FDI78zd0BorAg==", "exercise"=>{"suggested_emotion"=>"lalala", "arousal"=>"200", "valence"=>"0", "exercise_type"=>"pme", "video_id"=>"3"}, "commit"=>"Submit"}
+Unpermitted parameter: :suggested_emotion
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "exercises" ("user_id", "exercise_type", "valence", "arousal", "video_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["exercise_type", "pme"], ["valence", 0], ["arousal", 200], ["video_id", 3]]
+  [1m[35m (39.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3003/video4?exercise_type=pme
+Completed 302 Found in 49ms (ActiveRecord: 41.0ms)
+
+
+Started GET "/video4?exercise_type=pme" for ::1 at 2018-12-29 19:16:03 +0000
+Processing by ExercisesController#video4 as HTML
+  Parameters: {"exercise_type"=>"pme"}
+  Rendering exercises/video4.html.erb within layouts/application
+  Rendered exercises/video4.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" ORDER BY "exercises"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "exercises"."suggested_emotion" FROM "exercises"[0m
+Started GET "/exercise3" for ::1 at 2018-12-29 19:17:08 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (1.9ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 65ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 19:17:12 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (1.6ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 61ms (Views: 59.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 19:17:13 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (1.6ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 87ms (Views: 85.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for ::1 at 2018-12-29 19:18:01 +0000
+Processing by ExercisesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F/rck6YkdP3q8T187ENJp3Uw1EbsIY2u9xCl60NfDl3juXHSmS1kGc5+4rDZ5I/IgLt9hLJzk8SQlTxlHSPIvg==", "exercise"=>{"suggested_emotion"=>"asdasd", "arousal"=>"142", "valence"=>"43", "exercise_type"=>"pme", "video_id"=>"3"}, "commit"=>"Submit"}
+Unpermitted parameter: :suggested_emotion
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "exercises" ("user_id", "exercise_type", "valence", "arousal", "video_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["exercise_type", "pme"], ["valence", 43], ["arousal", 142], ["video_id", 3]]
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3003/video4?exercise_type=pme
+Completed 302 Found in 55ms (ActiveRecord: 48.2ms)
+
+
+Started GET "/video4?exercise_type=pme" for ::1 at 2018-12-29 19:18:01 +0000
+Processing by ExercisesController#video4 as HTML
+  Parameters: {"exercise_type"=>"pme"}
+  Rendering exercises/video4.html.erb within layouts/application
+  Rendered exercises/video4.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 63ms (Views: 58.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for ::1 at 2018-12-29 19:18:58 +0000
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ExercisesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F/rck6YkdP3q8T187ENJp3Uw1EbsIY2u9xCl60NfDl3juXHSmS1kGc5+4rDZ5I/IgLt9hLJzk8SQlTxlHSPIvg==", "exercise"=>{"suggested_emotion"=>"lolol", "arousal"=>"200", "valence"=>"0", "exercise_type"=>"pme", "video_id"=>"3"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "exercises" ("user_id", "exercise_type", "suggested_emotion", "valence", "arousal", "video_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["exercise_type", "pme"], ["suggested_emotion", "lolol"], ["valence", 0], ["arousal", 200], ["video_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3003/video4?exercise_type=pme
+Completed 302 Found in 91ms (ActiveRecord: 12.6ms)
+
+
+Started GET "/video4?exercise_type=pme" for ::1 at 2018-12-29 19:18:59 +0000
+Processing by ExercisesController#video4 as HTML
+  Parameters: {"exercise_type"=>"pme"}
+  Rendering exercises/video4.html.erb within layouts/application
+  Rendered exercises/video4.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 370ms (Views: 366.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "exercises"."suggested_emotion" FROM "exercises"[0m
+Started GET "/" for ::1 at 2018-12-29 19:22:12 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (199.9ms)
+Completed 200 OK in 268ms (Views: 263.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 19:22:47 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 122ms (Views: 119.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 19:23:20 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (48.7ms)
+Completed 200 OK in 162ms (Views: 161.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 19:24:07 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (65.8ms)
+Completed 200 OK in 149ms (Views: 148.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 19:24:28 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 106ms (Views: 105.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 19:24:51 +0000
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 81ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video3" for ::1 at 2018-12-29 20:39:56 +0000
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.6.1) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.6.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSurvey (20181229203230)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (43.3ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" bigserial primary key, "user_id" bigint, "points" integer)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_surveys_on_user_id" ON "surveys"  ("user_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181229203230"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/video3" for ::1 at 2018-12-29 20:40:17 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ExercisesController#video3 as HTML
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 79ms (Views: 61.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/video4?exercise_type=pme" for ::1 at 2018-12-29 20:40:21 +0000
+Processing by ExercisesController#video4 as HTML
+  Parameters: {"exercise_type"=>"pme"}
+  Rendering exercises/video4.html.erb within layouts/application
+  Rendered exercises/video4.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 76ms (Views: 70.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video4?exercise_type=pme" for ::1 at 2018-12-29 20:40:58 +0000
+Processing by ExercisesController#video4 as HTML
+  Parameters: {"exercise_type"=>"pme"}
+  Rendering exercises/video4.html.erb within layouts/application
+  Rendered exercises/video4.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 87ms (Views: 83.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video4?exercise_type=pme" for ::1 at 2018-12-29 20:41:12 +0000
+Processing by ExercisesController#video4 as HTML
+  Parameters: {"exercise_type"=>"pme"}
+  Rendering exercises/video4.html.erb within layouts/application
+  Rendered exercises/video4.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 83ms (Views: 77.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 20:44:31 +0000
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"instructions", :controller=>"home"}):
+    11:     By clicking the button “Next” below you are saying that you agree to take part in this research.
+    12:     </p>
+    13: 
+    14:     <%= link_to "Next", controller: "home", action: "instructions" %>
+    15: 
+    16:     <br>
+    17:     <p class="text-left mt-3"> 
+  
+app/views/home/index.html.erb:14:in `_app_views_home_index_html_erb__1373034416720346714_70139851294000'
+Started GET "/" for ::1 at 2018-12-29 20:46:31 +0000
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 72ms (Views: 67.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/instructions" for ::1 at 2018-12-29 20:46:34 +0000
+Processing by HomeController#instructions as HTML
+  Rendering home/instructions.html.erb within layouts/application
+  Rendered home/instructions.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 95ms (Views: 90.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video3" for ::1 at 2018-12-29 20:46:36 +0000
+Processing by ExercisesController#video3 as HTML
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 115ms (Views: 55.3ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 20:46:52 +0000
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 83ms (Views: 79.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 20:49:00 +0000
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 67ms (Views: 63.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/instructions" for ::1 at 2018-12-29 20:49:04 +0000
+Processing by HomeController#instructions as HTML
+  Rendering home/instructions.html.erb within layouts/application
+  Rendered home/instructions.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 89ms (Views: 84.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video3" for ::1 at 2018-12-29 20:49:09 +0000
+Processing by ExercisesController#video3 as HTML
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 107ms (Views: 101.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 20:49:12 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (9.9ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 96ms (Views: 95.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 20:49:58 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (1.6ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 57ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 20:50:26 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (1.9ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 70ms (Views: 69.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 21:00:32 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (9.2ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (16.1ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 5.1ms)
+
+
+  
+ActionView::Template::Error (The asset "energyempty.png" is not present in the asset pipeline.):
+     6:       <br>
+     7:       <%= f.text_field :suggested_emotion %>
+     8:       <br>
+     9:       <%= image_tag("energyempty.png") %>
+    10:       <%= f.range_field :arousal, :min=>0, :max=>200, :class=>"slide", :id=>"slider1"%>
+    11:       <br>
+    12:       <%= f.range_field :valence, :min=>0, :max=>200, :class=>"slide", :id=>"slider1"%>
+  
+app/views/exercises/_pme.html.erb:9:in `block in _app_views_exercises__pme_html_erb__901404988179222198_70139859809640'
+app/views/exercises/_pme.html.erb:4:in `_app_views_exercises__pme_html_erb__901404988179222198_70139859809640'
+app/views/exercises/exercise2.html.erb:1:in `_app_views_exercises_exercise__html_erb__4523345886758457737_70139859841120'
+app/controllers/exercises_controller.rb:37:in `block (2 levels) in exercise3'
+app/controllers/exercises_controller.rb:36:in `exercise3'
+Started GET "/exercise3" for ::1 at 2018-12-29 21:01:47 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (7.7ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (13.3ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "energyempty.png" is not present in the asset pipeline.):
+     6:       <br>
+     7:       <%= f.text_field :suggested_emotion %>
+     8:       <br>
+     9:       <%= image_tag "energyempty.png" %>
+    10:       <%= f.range_field :arousal, :min=>0, :max=>200, :class=>"slide", :id=>"slider1"%>
+    11:       <br>
+    12:       <%= f.range_field :valence, :min=>0, :max=>200, :class=>"slide", :id=>"slider1"%>
+  
+app/views/exercises/_pme.html.erb:9:in `block in _app_views_exercises__pme_html_erb__901404988179222198_70139859505280'
+app/views/exercises/_pme.html.erb:4:in `_app_views_exercises__pme_html_erb__901404988179222198_70139859505280'
+app/views/exercises/exercise2.html.erb:1:in `_app_views_exercises_exercise__html_erb__4523345886758457737_70139859536780'
+app/controllers/exercises_controller.rb:37:in `block (2 levels) in exercise3'
+app/controllers/exercises_controller.rb:36:in `exercise3'
+Started GET "/exercise3" for ::1 at 2018-12-29 21:02:43 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (229.5ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (235.6ms)
+Completed 200 OK in 386ms (Views: 385.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 21:03:35 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (6.3ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 63ms (Views: 62.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 21:05:58 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (8.8ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 95ms (Views: 94.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 21:08:55 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (14.0ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 75ms (Views: 74.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 21:16:09 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (4.4ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 6525ms (Views: 6524.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 21:16:35 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (6.9ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 132ms (Views: 130.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 21:17:41 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (13.9ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 111ms (Views: 110.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 21:18:36 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (6.2ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 4065ms (Views: 4064.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 21:19:22 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (6.4ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 3716ms (Views: 3714.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video3" for ::1 at 2018-12-29 21:19:33 +0000
+Processing by ExercisesController#video3 as HTML
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 182ms (Views: 177.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/instructions" for ::1 at 2018-12-29 21:19:37 +0000
+Processing by HomeController#instructions as HTML
+  Rendering home/instructions.html.erb within layouts/application
+  Rendered home/instructions.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 136ms (Views: 129.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 21:25:12 +0000
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 97ms (Views: 94.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 21:28:19 +0000
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (185.7ms)
+Completed 200 OK in 335ms (Views: 332.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 21:29:22 +0000
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 4482ms (Views: 4479.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 21:29:39 +0000
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 4253ms (Views: 4250.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 21:30:40 +0000
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 4020ms (Views: 4017.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 21:31:41 +0000
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 3793ms (Views: 3789.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 21:32:38 +0000
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 3958ms (Views: 3955.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/instructions" for ::1 at 2018-12-29 21:32:55 +0000
+Processing by HomeController#instructions as HTML
+  Rendering home/instructions.html.erb within layouts/application
+  Rendered home/instructions.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 163ms (Views: 154.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video3" for ::1 at 2018-12-29 21:32:57 +0000
+Processing by ExercisesController#video3 as HTML
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 138ms (Views: 120.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 21:33:00 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (12.8ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 110ms (Views: 108.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for ::1 at 2018-12-29 21:33:12 +0000
+Processing by ExercisesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P2312i2+KAfEOWOBdCItfji0Vm/8U7EXmN/JTUPeJxrzlyvkFdt4sKZdoJ3Nqej54cCz4xPllz4n9/0wIOVUXg==", "exercise"=>{"suggested_emotion"=>"ahah", "arousal"=>"200", "valence"=>"0", "exercise_type"=>"pme", "video_id"=>"3"}, "commit"=>"Submit"}
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "exercises" ("user_id", "exercise_type", "suggested_emotion", "valence", "arousal", "video_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["exercise_type", "pme"], ["suggested_emotion", "ahah"], ["valence", 0], ["arousal", 200], ["video_id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3003/video4?exercise_type=pme
+Completed 302 Found in 19ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/video4?exercise_type=pme" for ::1 at 2018-12-29 21:33:12 +0000
+Processing by ExercisesController#video4 as HTML
+  Parameters: {"exercise_type"=>"pme"}
+  Rendering exercises/video4.html.erb within layouts/application
+  Rendered exercises/video4.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 70ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video4?exercise_type=pme" for ::1 at 2018-12-29 21:34:41 +0000
+Processing by ExercisesController#video4 as HTML
+  Parameters: {"exercise_type"=>"pme"}
+  Rendering exercises/video4.html.erb within layouts/application
+  Rendered exercises/video4.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 68ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video4?exercise_type=pme" for ::1 at 2018-12-29 21:43:29 +0000
+Processing by ExercisesController#video4 as HTML
+  Parameters: {"exercise_type"=>"pme"}
+  Rendering exercises/video4.html.erb within layouts/application
+  Rendered exercises/video4.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 69ms (Views: 62.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for ::1 at 2018-12-29 21:43:38 +0000
+Processing by ExercisesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"og+6kctTIJKszYD9V/N8gZ/jODVbQo9AChWaL9yqkuBWTBfQ9FowdohCXzFiVLruamiR9wUQkSptkAOhgtZUAw==", "exercise"=>{"suggested_emotion"=>"ahah", "arousal"=>"200", "valence"=>"0", "exercise_type"=>"pme", "video_id"=>"3"}, "commit"=>"Submit"}
+  [1m[35m (6.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "exercises" ("user_id", "exercise_type", "suggested_emotion", "valence", "arousal", "video_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["exercise_type", "pme"], ["suggested_emotion", "ahah"], ["valence", 0], ["arousal", 200], ["video_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to 
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 26.8ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"create", :controller=>"surveys"}):
+  
+app/controllers/exercises_controller.rb:47:in `create'
+Started POST "/exercises" for ::1 at 2018-12-29 21:43:57 +0000
+Processing by ExercisesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"og+6kctTIJKszYD9V/N8gZ/jODVbQo9AChWaL9yqkuBWTBfQ9FowdohCXzFiVLruamiR9wUQkSptkAOhgtZUAw==", "exercise"=>{"suggested_emotion"=>"ahah", "arousal"=>"200", "valence"=>"0", "exercise_type"=>"pme", "video_id"=>"3"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "exercises" ("user_id", "exercise_type", "suggested_emotion", "valence", "arousal", "video_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["exercise_type", "pme"], ["suggested_emotion", "ahah"], ["valence", 0], ["arousal", 200], ["video_id", 3]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to 
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 11.6ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"new", :controller=>"surveys"}):
+  
+app/controllers/exercises_controller.rb:47:in `create'
+Started GET "/exercise3" for ::1 at 2018-12-29 21:44:44 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (5.4ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 106ms (Views: 92.1ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/exercises" for ::1 at 2018-12-29 21:44:50 +0000
+Processing by ExercisesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gkkn1HCbn1GIwgI2V4zwPX6H5JgxyC8k6wGpx7frpLXuCoqVT5KPtaxN3fpiKzZSiwxNWm+aMU6MhDBJ6ZdiVg==", "exercise"=>{"suggested_emotion"=>"asdasd", "arousal"=>"140", "valence"=>"100", "exercise_type"=>"pme", "video_id"=>"3"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "exercises" ("user_id", "exercise_type", "suggested_emotion", "valence", "arousal", "video_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["exercise_type", "pme"], ["suggested_emotion", "asdasd"], ["valence", 100], ["arousal", 140], ["video_id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3003/new
+Completed 302 Found in 29ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/new" for ::1 at 2018-12-29 21:44:50 +0000
+Processing by SurveysController#new as HTML
+Completed 406 Not Acceptable in 184ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (SurveysController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.6.1) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.6.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.6.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.6.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.6.1) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.6.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.6.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.6.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.6.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.6.1) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.6.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.6.1) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.6.1) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.6.1) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6.1) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6.1) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6.1) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/new" for ::1 at 2018-12-29 21:45:21 +0000
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"surveys"}):
+    4: 
+    5:     <p>I thought this user interface to assess emotional states was easy to use:</p>
+    6: 
+    7:     <%= form_for :survey, url: {action: "create"} do |f| %>
+    8:       Strongly disagree
+    9:       <%= f.radio_button :points, "1" %>
+   10:       <%= f.radio_button :points, "2" %>
+  
+app/views/surveys/new.html.erb:7:in `_app_views_surveys_new_html_erb___1561697852287160323_70139851245280'
+Started GET "/new" for ::1 at 2018-12-29 21:45:53 +0000
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 76ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for ::1 at 2018-12-29 21:45:58 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/create"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/new" for ::1 at 2018-12-29 21:46:12 +0000
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 70ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for ::1 at 2018-12-29 21:46:14 +0000
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"maBnEnZwG6vilmTnkAXND09H6llKAoVM7qxWekbfK7xt48pTSXkLT8YZuyulogtgusxDmxRQmyaJKc/0GKPtXw==", "survey"=>{"points"=>"4"}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 235ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `survey_params' for #<SurveysController:0x007f956ab39c80>
+Did you mean?  survey_path):
+  
+app/controllers/surveys_controller.rb:8:in `create'
+Started GET "/new" for ::1 at 2018-12-29 21:46:36 +0000
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 67ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for ::1 at 2018-12-29 21:46:39 +0000
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2yRBM2uDEHnpfOZnum6goD1h9WxO3GCcbWJvtnMV5l8vZ+xyVIoAnc3zOauPyWbPyOpcrhCOfvYK5/Y4LWkgvA==", "survey"=>{"points"=>"4"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 72ms (Views: 54.5ms | ActiveRecord: 5.8ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "points") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 1], ["points", 2]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/create" for ::1 at 2018-12-29 21:48:33 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/create"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/create" for ::1 at 2018-12-29 21:48:40 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/create"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/new" for ::1 at 2018-12-29 21:48:45 +0000
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 71ms (Views: 62.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for ::1 at 2018-12-29 21:48:48 +0000
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iLCZ3vq8JICltUb3dwJRLVRhItzZtB4c+FYxrYJBg9188zSfxbU0ZIE6mTtCpZdCoeqLHofmAHaf06gj3D1FPg==", "survey"=>{"points"=>"2"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "points") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 1], ["points", 2]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3003/home/final
+Completed 302 Found in 52ms (ActiveRecord: 13.2ms)
+
+
+Started GET "/home/final" for ::1 at 2018-12-29 21:48:48 +0000
+Processing by HomeController#final as HTML
+  Rendering home/final.html.erb within layouts/application
+  Rendered home/final.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 72ms (Views: 68.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/final" for ::1 at 2018-12-29 21:49:47 +0000
+Processing by HomeController#final as HTML
+  Rendering home/final.html.erb within layouts/application
+  Rendered home/final.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 129ms (Views: 123.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/final" for ::1 at 2018-12-29 21:50:30 +0000
+Processing by HomeController#final as HTML
+  Rendering home/final.html.erb within layouts/application
+  Rendered home/final.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/pedrocioga/Documents/workspace/eaui/app/views/home/final.html.erb:7: syntax error, unexpected tLABEL
+utput_buffer.append=( mail_to: "cd.saraiva@campus.fct.unl.pt
+                              ^):
+  
+app/views/home/final.html.erb:7: syntax error, unexpected tLABEL
+Started GET "/home/final" for ::1 at 2018-12-29 21:51:23 +0000
+Processing by HomeController#final as HTML
+  Rendering home/final.html.erb within layouts/application
+  Rendered home/final.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 98ms (Views: 92.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (221.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "myapp_development"[0m
+  [1m[35m (199.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "myapp_test"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "exercises" CASCADE[0m
+  [1m[35m (37.3ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" bigserial primary key, "user_id" bigint, "exercise_type" character varying, "suggested_emotion" character varying, "valence" integer, "arousal" integer, "video_id" integer)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_exercises_on_user_id" ON "exercises"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "surveys" CASCADE[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" bigserial primary key, "user_id" bigint, "points" integer)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_surveys_on_user_id" ON "surveys"  ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "gender" character varying, "age" integer, "country" character varying, "english_p" integer)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20181229203230)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20181209223548),
+(20181209224104),
+(20181217191423);
+
+[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-12-29 21:52:22.711860"], ["updated_at", "2018-12-29 21:52:22.711860"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "exercises" CASCADE[0m
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" bigserial primary key, "user_id" bigint, "exercise_type" character varying, "suggested_emotion" character varying, "valence" integer, "arousal" integer, "video_id" integer)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_exercises_on_user_id" ON "exercises"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "surveys" CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "surveys" ("id" bigserial primary key, "user_id" bigint, "points" integer)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_surveys_on_user_id" ON "surveys"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "gender" character varying, "age" integer, "country" character varying, "english_p" integer)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20181229203230)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20181209223548),
+(20181209224104),
+(20181217191423);
+
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-12-29 21:52:22.832809"], ["updated_at", "2018-12-29 21:52:22.832809"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-12-29 21:52:22.841967"], ["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2018-12-29 21:52:31 +0000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (203.2ms)
+Completed 200 OK in 666ms (Views: 638.9ms | ActiveRecord: 7.9ms)
+
+
+Started POST "/users" for ::1 at 2018-12-29 21:52:52 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yukcq5hU29QQgpgCnxJKhJvFb4aKvT9CkFVzGnm/rpIjqrsuXIf6+xLq63U6lG9f0YQ64A4MM7CRkQk6/0PNqg==", "user"=>{"email"=>"cenas@mail", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"18", "gender"=>"Male", "country"=>"AS", "english_p"=>"High"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cenas@mail"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "gender", "age", "country", "english_p") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "cenas@mail"], ["encrypted_password", "$2a$11$TEv8RzKyM2rszlUs350dR.8qI5mG6ZgIKSDrsONzynmVTLrgVk5j2"], ["created_at", "2018-12-29 21:52:53.152805"], ["updated_at", "2018-12-29 21:52:53.152805"], ["gender", "Male"], ["age", 18], ["country", "AS"], ["english_p", 0]]
+  [1m[35m (41.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3003/
+Completed 302 Found in 278ms (ActiveRecord: 43.6ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 21:52:53 +0000
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 133ms (Views: 127.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/home/instructions" for ::1 at 2018-12-29 21:55:01 +0000
+Processing by HomeController#instructions as HTML
+  Rendering home/instructions.html.erb within layouts/application
+  Rendered home/instructions.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 63ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video3" for ::1 at 2018-12-29 21:55:02 +0000
+Processing by ExercisesController#video3 as HTML
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 99ms (Views: 80.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 21:55:05 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (16.0ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 107ms (Views: 105.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/exercises" for ::1 at 2018-12-29 21:55:13 +0000
+Processing by ExercisesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ZJqY1PTS+DlKWGx8kwKX+YtHXgsCmXSr8G0gAWJTYq54rIxywY3oRW9HTgKVNuGEAmQszq0Pb3cJNO9BHh0cQ==", "exercise"=>{"suggested_emotion"=>"cool", "arousal"=>"173", "valence"=>"23", "exercise_type"=>"pme", "video_id"=>"3"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "exercises" ("user_id", "exercise_type", "suggested_emotion", "valence", "arousal", "video_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["exercise_type", "pme"], ["suggested_emotion", "cool"], ["valence", 23], ["arousal", 173], ["video_id", 3]]
+  [1m[35m (39.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3003/new
+Completed 302 Found in 70ms (ActiveRecord: 41.0ms)
+
+
+Started GET "/new" for ::1 at 2018-12-29 21:55:13 +0000
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 69ms (Views: 66.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercises"[0m
+  [1m[36mExercise Load (0.4ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" ORDER BY "exercises"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/create" for ::1 at 2018-12-29 21:56:31 +0000
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/g5mdytRoF8jKVCdmM17unMfFrh3Jv0CeY/R5g6YG04XTcHy74KBcCFBI+o9S15hOV5D3vOX8fB4S6vGiGR4dg==", "survey"=>{"points"=>"5"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "points") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 1], ["points", 5]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3003/home/final
+Completed 302 Found in 31ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/home/final" for ::1 at 2018-12-29 21:56:31 +0000
+Processing by HomeController#final as HTML
+  Rendering home/final.html.erb within layouts/application
+  Rendered home/final.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 63ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "surveys"[0m
+  [1m[36mSurvey Load (0.3ms)[0m  [1m[34mSELECT  "surveys".* FROM "surveys" ORDER BY "surveys"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2018-12-29 21:57:00 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (51.6ms)
+Completed 200 OK in 143ms (Views: 140.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2018-12-29 21:57:21 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s9cjZFO7Omt4zR7yE11JGCzKIlUSQ2x6LG+Qv08rLGyfspmfDojgLnGVbNXvYCCjeKK0OrBW5K9L2IWY4/By1w==", "user"=>{"email"=>"papapa@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"66", "gender"=>"Female", "country"=>"AO", "english_p"=>"Very high"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "papapa@mail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "gender", "age", "country", "english_p") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "papapa@mail.com"], ["encrypted_password", "$2a$11$hOCjqpTWckcMl/fSfh0w5.lRxNDYv0ftmW2/dmGcrn5ORvSyFWhVy"], ["created_at", "2018-12-29 21:57:21.650991"], ["updated_at", "2018-12-29 21:57:21.650991"], ["gender", "Female"], ["age", 66], ["country", "AO"], ["english_p", 0]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3003/
+Completed 302 Found in 169ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 21:57:21 +0000
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 74ms (Views: 71.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/home/instructions" for ::1 at 2018-12-29 21:57:36 +0000
+Processing by HomeController#instructions as HTML
+  Rendering home/instructions.html.erb within layouts/application
+  Rendered home/instructions.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 57ms (Views: 53.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video3" for ::1 at 2018-12-29 21:57:37 +0000
+Processing by ExercisesController#video3 as HTML
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 71ms (Views: 67.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 21:57:38 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (1.1ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/pedrocioga/Documents/workspace/eaui/app/views/exercises/_pme.html.erb:7: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+nd=( if current_user.id.odd? );@output_buffer.safe_append='
+                              ^
+/Users/pedrocioga/Documents/workspace/eaui/app/views/exercises/_pme.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;       end 
+                   ^
+/Users/pedrocioga/Documents/workspace/eaui/app/views/exercises/_pme.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/pedrocioga/Documents/workspace/eaui/app/views/exercises/_pme.html.erb:31: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/pedrocioga/Documents/workspace/eaui/app/views/exercises/_pme.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/exercises/_pme.html.erb:7: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/exercises/_pme.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+app/views/exercises/_pme.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+app/views/exercises/_pme.html.erb:31: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/exercises/_pme.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+app/views/exercises/exercise2.html.erb:1:in `_app_views_exercises_exercise__html_erb___4381834152670754492_70235448225660'
+app/controllers/exercises_controller.rb:37:in `block (2 levels) in exercise3'
+app/controllers/exercises_controller.rb:36:in `exercise3'
+Started GET "/exercise3" for ::1 at 2018-12-29 21:57:51 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (2.1ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/pedrocioga/Documents/workspace/eaui/app/views/exercises/_pme.html.erb:7: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+d=( if @current_user.id.odd? );@output_buffer.safe_append='
+                              ^
+/Users/pedrocioga/Documents/workspace/eaui/app/views/exercises/_pme.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;       end 
+                   ^
+/Users/pedrocioga/Documents/workspace/eaui/app/views/exercises/_pme.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/pedrocioga/Documents/workspace/eaui/app/views/exercises/_pme.html.erb:31: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/pedrocioga/Documents/workspace/eaui/app/views/exercises/_pme.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/exercises/_pme.html.erb:7: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+app/views/exercises/_pme.html.erb:9: syntax error, unexpected keyword_end, expecting ')'
+app/views/exercises/_pme.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+app/views/exercises/_pme.html.erb:31: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/exercises/_pme.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
+app/views/exercises/exercise2.html.erb:1:in `_app_views_exercises_exercise__html_erb___4381834152670754492_70235438742160'
+app/controllers/exercises_controller.rb:37:in `block (2 levels) in exercise3'
+app/controllers/exercises_controller.rb:36:in `exercise3'
+Started GET "/exercise3" for ::1 at 2018-12-29 21:58:05 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (7.2ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    4:     <%= form_for :exercise, url: {action: "create"} do |f| %>
+    5:       <%= f.label :suggested_emotion, "Write a word or a setence about what you are feeling" %>
+    6:       <br>
+    7:       <% if @current_user.id.odd? %>
+    8:       <%= f.text_field :suggested_emotion %>
+    9:       <% end %>
+   10:       <br>
+  
+app/views/exercises/_pme.html.erb:7:in `block in _app_views_exercises__pme_html_erb___670150264051820315_70235472553600'
+app/views/exercises/_pme.html.erb:4:in `_app_views_exercises__pme_html_erb___670150264051820315_70235472553600'
+app/views/exercises/exercise2.html.erb:1:in `_app_views_exercises_exercise__html_erb___4381834152670754492_70235472590040'
+app/controllers/exercises_controller.rb:37:in `block (2 levels) in exercise3'
+app/controllers/exercises_controller.rb:36:in `exercise3'
+Started GET "/exercise3" for ::1 at 2018-12-29 21:58:57 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered exercises/_pme.html.erb (12.0ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 116ms (Views: 114.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 21:59:05 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered exercises/_pme.html.erb (24.7ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 147ms (Views: 145.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 21:59:22 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered exercises/_pme.html.erb (16.7ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 100ms (Views: 98.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/exercises" for ::1 at 2018-12-29 21:59:29 +0000
+Processing by ExercisesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mnDq3pWri50mtxaBnRf/dBssWBQib6oSd/7Lcg1FTJC2FVAlyJhR2C/vZKZhKpbPT0TOe4B6IscQSd5VoZ4SKw==", "exercise"=>{"arousal"=>"0", "valence"=>"200", "exercise_type"=>"pme", "video_id"=>"3"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (5.6ms)[0m  [1m[32mINSERT INTO "exercises" ("user_id", "exercise_type", "valence", "arousal", "video_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["exercise_type", "pme"], ["valence", 200], ["arousal", 0], ["video_id", 3]]
+  [1m[35m (41.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3003/new
+Completed 302 Found in 57ms (ActiveRecord: 47.6ms)
+
+
+Started GET "/new" for ::1 at 2018-12-29 21:59:29 +0000
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 92ms (Views: 89.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for ::1 at 2018-12-29 21:59:31 +0000
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mxCFKpooGXm95ZTR2YHH7iXM3Us+hoTjjm5esjnc/g+3dT/RxxvDPLS95vYlvK5VcaRLJJyTDDbp2UuVlQegtA==", "survey"=>{"points"=>"1"}, "commit"=>"Submit"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "points") VALUES ($1, $2) RETURNING "id"[0m  [["user_id", 2], ["points", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3003/home/final
+Completed 302 Found in 12ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/home/final" for ::1 at 2018-12-29 21:59:31 +0000
+Processing by HomeController#final as HTML
+  Rendering home/final.html.erb within layouts/application
+  Rendered home/final.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 60ms (Views: 55.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mSurvey Load (0.4ms)[0m  [1m[34mSELECT  "surveys".* FROM "surveys" ORDER BY "surveys"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mSurvey Load (0.5ms)[0m  [1m[34mSELECT  "surveys".* FROM "surveys" ORDER BY "surveys"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" ORDER BY "exercises"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
