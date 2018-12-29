@@ -16,6 +16,6 @@ class SurveysController < ApplicationController
   end
 
   def survey_params
-    params.require(:survey).permit(:points)
+    params.require(:survey).permit(:points, :feedback)
   end
 end

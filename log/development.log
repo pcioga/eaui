@@ -11281,3 +11281,246 @@ Completed 200 OK in 60ms (Views: 55.5ms | ActiveRecord: 0.0ms)
   [1m[36mSurvey Load (0.4ms)[0m  [1m[34mSELECT  "surveys".* FROM "surveys" ORDER BY "surveys"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mSurvey Load (0.5ms)[0m  [1m[34mSELECT  "surveys".* FROM "surveys" ORDER BY "surveys"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mExercise Load (0.5ms)[0m  [1m[34mSELECT  "exercises".* FROM "exercises" ORDER BY "exercises"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/new" for ::1 at 2018-12-29 23:02:07 +0000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.6.1) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.6.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFeedbackToSurvey (20181229225846)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (42.7ms)[0m  [1m[35mALTER TABLE "surveys" ADD "feedback" text[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181229225846"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/new" for ::1 at 2018-12-29 23:03:31 +0000
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 63ms (Views: 57.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for ::1 at 2018-12-29 23:04:23 +0000
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 79ms (Views: 76.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for ::1 at 2018-12-29 23:04:45 +0000
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 64ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for ::1 at 2018-12-29 23:04:54 +0000
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 179ms (Views: 173.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for ::1 at 2018-12-29 23:05:00 +0000
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 83ms (Views: 81.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for ::1 at 2018-12-29 23:05:20 +0000
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Eb8Nt/D1tVsvmyEDqoQtLr2QC42ZmZPieFQpgfxL5Hfl/KD2z/ylvwsU/s+fI+tBSBuiT8fLjYgf0bAPojcilA==", "survey"=>{"points"=>"4", "feedback"=>"sadasd"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 118ms (Views: 71.0ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/create" for ::1 at 2018-12-29 23:05:35 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/create"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/exercise3" for ::1 at 2018-12-29 23:05:40 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  Rendered exercises/_pme.html.erb (5.3ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 4.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    2:   <div class="my-auto">
+    3:     <h2>Assessment</h2>
+    4:     <%= form_for :exercise, url: {action: "create"} do |f| %>
+    5:       <% if current_user.id.odd? %>
+    6:         <%= f.label :suggested_emotion, "Write a word or a setence about what you are feeling" %>
+    7:         <br>
+    8:         <%= f.text_field :suggested_emotion %>
+  
+app/views/exercises/_pme.html.erb:5:in `block in _app_views_exercises__pme_html_erb___670150264051820315_70235473887700'
+app/views/exercises/_pme.html.erb:4:in `_app_views_exercises__pme_html_erb___670150264051820315_70235473887700'
+app/views/exercises/exercise2.html.erb:1:in `_app_views_exercises_exercise__html_erb___4381834152670754492_70235473911020'
+app/controllers/exercises_controller.rb:37:in `block (2 levels) in exercise3'
+app/controllers/exercises_controller.rb:36:in `exercise3'
+Started GET "/" for ::1 at 2018-12-29 23:05:46 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 103ms (Views: 102.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2018-12-29 23:06:03 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"46whgmuhVna1tWv043VxVnsz2WlctQjb/NP10K5J/rsX74zDVKhGkpE6tDjW0rc5jrhwqwLnFrGbVmxe8DU4WA==", "user"=>{"email"=>"asda@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "age"=>"12", "gender"=>"Male", "country"=>"AF", "english_p"=>"Low"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asda@mail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "gender", "age", "country", "english_p") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "asda@mail.com"], ["encrypted_password", "$2a$11$o5bPIPdZF1qkBnNYSMAhIen0PCYKosuAmxhMakcHz.SC3uS5YnK/i"], ["created_at", "2018-12-29 23:06:03.401741"], ["updated_at", "2018-12-29 23:06:03.401741"], ["gender", "Male"], ["age", 12], ["country", "AF"], ["english_p", 0]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3003/
+Completed 302 Found in 182ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2018-12-29 23:06:03 +0000
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 75ms (Views: 72.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/instructions" for ::1 at 2018-12-29 23:06:06 +0000
+Processing by HomeController#instructions as HTML
+  Rendering home/instructions.html.erb within layouts/application
+  Rendered home/instructions.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 93ms (Views: 87.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/video3" for ::1 at 2018-12-29 23:06:07 +0000
+Processing by ExercisesController#video3 as HTML
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 116ms (Views: 110.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for ::1 at 2018-12-29 23:06:09 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered exercises/_pme.html.erb (27.0ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 109ms (Views: 103.7ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/exercises" for ::1 at 2018-12-29 23:06:14 +0000
+Processing by ExercisesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PUAQEtmPjVinFs/48kIQEd96SvwVsIzsP5LUFDRq2hfxus4s4erd78VyDORLydWWBg6vcPoGqsWAuuBpV1GpUw==", "exercise"=>{"suggested_emotion"=>"213", "arousal"=>"139", "valence"=>"70", "exercise_type"=>"pme", "video_id"=>"3"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "exercises" ("user_id", "exercise_type", "suggested_emotion", "valence", "arousal", "video_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 1], ["exercise_type", "pme"], ["suggested_emotion", "213"], ["valence", 70], ["arousal", 139], ["video_id", 3]]
+  [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3003/new
+Completed 302 Found in 55ms (ActiveRecord: 43.8ms)
+
+
+Started GET "/new" for ::1 at 2018-12-29 23:06:14 +0000
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 62ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for ::1 at 2018-12-29 23:06:19 +0000
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H2dALJ+sj/b729cFGrjr8zO2Vs2GYBUAPDeIgZv0YITrJO1toKWfEt9UCMkvHy2cxj3/D9gyC2pbshEPxYimZw==", "survey"=>{"points"=>"4", "feedback"=>"asdasfasf"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "surveys" ("user_id", "points", "feedback") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 3], ["points", 4], ["feedback", "asdasfasf"]]
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3003/home/final
+Completed 302 Found in 12ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/home/final" for ::1 at 2018-12-29 23:06:19 +0000
+Processing by HomeController#final as HTML
+  Rendering home/final.html.erb within layouts/application
+  Rendered home/final.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 75ms (Views: 72.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mSurvey Load (0.9ms)[0m  [1m[34mSELECT  "surveys".* FROM "surveys" ORDER BY "surveys"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]

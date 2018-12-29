@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181229203230) do
+ActiveRecord::Schema.define(version: 20181229225846) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20181229203230) do
   create_table "surveys", force: :cascade do |t|
     t.bigint "user_id"
     t.integer "points"
+    t.text "feedback"
     t.index ["user_id"], name: "index_surveys_on_user_id"
   end
 
