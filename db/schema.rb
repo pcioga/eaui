@@ -12,8 +12,11 @@
 
 ActiveRecord::Schema.define(version: 20181217191423) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "exercises", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.string "exercise_type"
     t.string "suggested_emotion"
     t.integer "valence"
