@@ -1,23 +1,25 @@
 <div class="container h-100 d-flex justify-content-center mt-5">
   <div class="my-auto">
     <h2>Introduction</h2>
+    <br>
     <p class="text-left">
-    This survey has been designed to investigate the validity of a user interface for the assessment of emotional experiences.
+    This survey has been designed to assess a digital interface for the self-assessment of emotional experiences and it takes approximately 4 minutes to complete.
     <br>
-    The survey takes approximately 8 minutes to complete.
+    The collected data will only be viewed by the research team.
     <br>
-    All data will be anonymous and will only be viewed by the research team. The anonymized data may be shared with other authorized researchers. Your participation in this research is entirely voluntary. You will be able to withdraw anytime during the questionnaire by closing the browser. You must also be aged over 18 to participate.
+    Your participation in this research is entirely voluntary. You will be able to withdraw anytime during the questionnaire by closing the browser. You must also be aged over 18 to participate.
     <br>
     By clicking the button “Next” below you are saying that you agree to take part in this research.
     </p>
-
+<br>
     <%= link_to "Next", controller: "home", action: "instructions" %>
-
+<br>
     <br>
-    <p class="text-left mt-3"> 
-    If you wish to receive more information about this study or have any questions about this experiment, please contact Carla Nave at <%= mail_to "cd.saraiva@campus.fct.unl.pt" %> .
     <br>
+    <p class="text-left" style = "font-size:12px;"> 
     This survey is part of a doctoral research project in Digital Media by the Universidade Nova de Lisboa, part of the UT Austin Portugal Program, and is funded by Fundação para a Ciência e Tecnologia - grant PD/BD/114141/2015.
+    <br>
+    If you wish to receive more information about this study or have any questions about this experiment, please contact Carla Nave at <%= mail_to "cd.saraiva@campus.fct.unl.pt" %> .
     </p>
     <%= image_tag "fctunl1.png", class: "style_image_fctul" %>
     <%= image_tag "fctunl.png", class: "style_image_fctul1 ml-3" %>

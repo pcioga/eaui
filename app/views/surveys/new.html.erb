@@ -1,23 +1,35 @@
 <div class="container h-100 d-flex justify-content-center mt-5">
   <div class="my-auto">
     <h2>Usability Survey</h2>
+<br>
+<br>
+    <b><p>I thought this user interface to assess emotional states was easy to use:</p></b>
 
-    <p>I thought this user interface to assess emotional states was easy to use:</p>
-
+<div class="form-group">   
     <%= form_for :survey, url: {action: "create"} do |f| %>
-      Strongly disagree
-      <%= f.radio_button :points, "1" %>
-      <%= f.radio_button :points, "2" %>
-      <%= f.radio_button :points, "3" %>
-      <%= f.radio_button :points, "4" %>
-      <%= f.radio_button :points, "5" %>
+      &nbsp;&nbsp;&nbsp;&nbsp;Strongly disagree
+      &nbsp;&nbsp;&nbsp;&nbsp;<%= f.radio_button :points, "1" %>&nbsp;&nbsp;&nbsp;&nbsp;
+      <%= f.radio_button :points, "2" %>&nbsp;&nbsp;&nbsp;&nbsp;
+      <%= f.radio_button :points, "3" %>&nbsp;&nbsp;&nbsp;&nbsp;
+      <%= f.radio_button :points, "4" %>&nbsp;&nbsp;&nbsp;&nbsp;
+      <%= f.radio_button :points, "5" %>&nbsp;&nbsp;&nbsp;&nbsp;
       Strongly agree
+    </div>
       <br>
       <br>
-      <%= f.label :feedback, "Feedback" %><br />
-      <%= f.text_area :feedback %>
+
+ <div class="form-group">   
+      <b><%= f.label :feedback, "In your opinion, what were the sliders measuring?" %>&nbsp;&nbsp;&nbsp;&nbsp;<%= image_tag "sliders.png", class: "style_image_sliders"%><br /></b>
+      
+      <%= f.text_area :feedback, class: "style_textarea" %>
+      </div>
+      
+
       <br>
+          <br>
+    <br>
       <%= f.submit "Submit" %>
     <% end %>
   </div>
 </div>
+
