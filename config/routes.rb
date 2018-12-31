@@ -5,11 +5,11 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     authenticated :user do
-      root 'home#index', as: :authenticated_root
+      root 'exercises#video3'
     end
 
     unauthenticated do
-      root 'devise/registrations#new', as: :unauthenticated_root
+      root 'home#index'
     end
   end
 
