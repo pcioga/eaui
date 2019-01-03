@@ -1,6 +1,6 @@
 <div class="container h-100 d-flex justify-content-center mt-5">
   <div class="my-auto">
-    <h2>Demographic Data</h2>
+    <h2>Characterization</h2>
 <br>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -48,10 +48,10 @@
       <%= f.radio_button :english_p, "Very high" %>
       <%= f.label :english_p, 'Very high', :value => 'Very high' %>
     </div>
-    <br>
+
 
     <div class="form-group">
-      <%= f.submit "Submit" %>
+      <%= f.submit "Next" %>
     </div>
     <% end %>
   </div>

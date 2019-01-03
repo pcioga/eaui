@@ -14245,3 +14245,595 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 60ms (Views: 59.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-01-02 15:42:02 +0000
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (196.4ms)
+Completed 200 OK in 274ms (Views: 267.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/instructions" for 127.0.0.1 at 2019-01-02 15:42:57 +0000
+Processing by HomeController#instructions as HTML
+  Rendering home/instructions.html.erb within layouts/application
+  Rendered home/instructions.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 86ms (Views: 82.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/instructions" for 127.0.0.1 at 2019-01-02 15:43:13 +0000
+Processing by HomeController#instructions as HTML
+  Rendering home/instructions.html.erb within layouts/application
+  Rendered home/instructions.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-02 15:43:15 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (114.9ms)
+Completed 200 OK in 201ms (Views: 152.5ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-02 15:43:36 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 88ms (Views: 86.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-02 15:43:44 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wN281hdfFe+SoCViQEDIGlu6hPIcTbe4ecstCbVKie1fYZa6yvivCZic7BBAYQ/tEjskpWsVPiQUEeIUIhxF4g==", "user"=>{"age"=>"11", "gender"=>"Female", "country"=>"AI", "english_p"=>"Low"}, "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "gender", "age", "country", "english_p") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2019-01-02 15:43:44.331948"], ["updated_at", "2019-01-02 15:43:44.331948"], ["gender", "Female"], ["age", 11], ["country", "AI"], ["english_p", 0]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 5.9ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=() already exists.
+: INSERT INTO "users" ("created_at", "updated_at", "gender", "age", "country", "english_p") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"):
+  
+activerecord (5.1.6.1) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `async_exec'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `block (2 levels) in exec_no_cache'
+activesupport (5.1.6.1) lib/active_support/dependencies/interlock.rb:46:in `block in permit_concurrent_loads'
+activesupport (5.1.6.1) lib/active_support/concurrency/share_lock.rb:185:in `yield_shares'
+activesupport (5.1.6.1) lib/active_support/dependencies/interlock.rb:45:in `permit_concurrent_loads'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/postgresql_adapter.rb:615:in `block in exec_no_cache'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract_adapter.rb:613:in `block (2 levels) in log'
+/Users/carla/.rbenv/versions/2.5.3/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract_adapter.rb:612:in `block in log'
+activesupport (5.1.6.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract_adapter.rb:604:in `log'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/postgresql_adapter.rb:614:in `exec_no_cache'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/postgresql_adapter.rb:603:in `execute_and_clear'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/postgresql/database_statements.rb:79:in `exec_query'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/database_statements.rb:102:in `exec_insert'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/postgresql/database_statements.rb:113:in `exec_insert'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/database_statements.rb:133:in `insert'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/query_cache.rb:17:in `insert'
+activerecord (5.1.6.1) lib/active_record/relation.rb:61:in `insert'
+activerecord (5.1.6.1) lib/active_record/persistence.rb:582:in `_create_record'
+activerecord (5.1.6.1) lib/active_record/counter_cache.rb:178:in `_create_record'
+activerecord (5.1.6.1) lib/active_record/locking/optimistic.rb:69:in `_create_record'
+activerecord (5.1.6.1) lib/active_record/attribute_methods/dirty.rb:297:in `_create_record'
+activerecord (5.1.6.1) lib/active_record/callbacks.rb:340:in `block in _create_record'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:827:in `_run_create_callbacks'
+activerecord (5.1.6.1) lib/active_record/callbacks.rb:340:in `_create_record'
+activerecord (5.1.6.1) lib/active_record/timestamp.rb:95:in `_create_record'
+activerecord (5.1.6.1) lib/active_record/persistence.rb:553:in `create_or_update'
+activerecord (5.1.6.1) lib/active_record/callbacks.rb:336:in `block in create_or_update'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:827:in `_run_save_callbacks'
+activerecord (5.1.6.1) lib/active_record/callbacks.rb:336:in `create_or_update'
+activerecord (5.1.6.1) lib/active_record/persistence.rb:129:in `save'
+activerecord (5.1.6.1) lib/active_record/validations.rb:44:in `save'
+activerecord (5.1.6.1) lib/active_record/attribute_methods/dirty.rb:35:in `save'
+activerecord (5.1.6.1) lib/active_record/transactions.rb:308:in `block (2 levels) in save'
+activerecord (5.1.6.1) lib/active_record/transactions.rb:384:in `block in with_transaction_returning_status'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `block in transaction'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/transaction.rb:194:in `block in within_new_transaction'
+/Users/carla/.rbenv/versions/2.5.3/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/transaction.rb:191:in `within_new_transaction'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `transaction'
+activerecord (5.1.6.1) lib/active_record/transactions.rb:210:in `transaction'
+activerecord (5.1.6.1) lib/active_record/transactions.rb:381:in `with_transaction_returning_status'
+activerecord (5.1.6.1) lib/active_record/transactions.rb:308:in `block in save'
+activerecord (5.1.6.1) lib/active_record/transactions.rb:323:in `rollback_active_record_state!'
+activerecord (5.1.6.1) lib/active_record/transactions.rb:307:in `save'
+activerecord (5.1.6.1) lib/active_record/suppressor.rb:42:in `save'
+devise (4.5.0) app/controllers/devise/registrations_controller.rb:19:in `create'
+actionpack (5.1.6.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.6.1) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.6.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.6.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.6.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.6.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.6.1) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.6.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.6.1) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.6.1) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.6.1) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6.1) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6.1) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6.1) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.1.6.1) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2019-01-02 15:45:01 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wN281hdfFe+SoCViQEDIGlu6hPIcTbe4ecstCbVKie1fYZa6yvivCZic7BBAYQ/tEjskpWsVPiQUEeIUIhxF4g==", "user"=>{"age"=>"11", "gender"=>"Female", "country"=>"AI", "english_p"=>"Low"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "gender", "age", "country", "english_p") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2019-01-02 15:45:01.857216"], ["updated_at", "2019-01-02 15:45:01.857216"], ["gender", "Female"], ["age", 11], ["country", "AI"], ["english_p", 0]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=() already exists.
+: INSERT INTO "users" ("created_at", "updated_at", "gender", "age", "country", "english_p") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"):
+  
+activerecord (5.1.6.1) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `async_exec'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `block (2 levels) in exec_no_cache'
+activesupport (5.1.6.1) lib/active_support/dependencies/interlock.rb:46:in `block in permit_concurrent_loads'
+activesupport (5.1.6.1) lib/active_support/concurrency/share_lock.rb:185:in `yield_shares'
+activesupport (5.1.6.1) lib/active_support/dependencies/interlock.rb:45:in `permit_concurrent_loads'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/postgresql_adapter.rb:615:in `block in exec_no_cache'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract_adapter.rb:613:in `block (2 levels) in log'
+/Users/carla/.rbenv/versions/2.5.3/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract_adapter.rb:612:in `block in log'
+activesupport (5.1.6.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract_adapter.rb:604:in `log'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/postgresql_adapter.rb:614:in `exec_no_cache'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/postgresql_adapter.rb:603:in `execute_and_clear'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/postgresql/database_statements.rb:79:in `exec_query'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/database_statements.rb:102:in `exec_insert'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/postgresql/database_statements.rb:113:in `exec_insert'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/database_statements.rb:133:in `insert'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/query_cache.rb:17:in `insert'
+activerecord (5.1.6.1) lib/active_record/relation.rb:61:in `insert'
+activerecord (5.1.6.1) lib/active_record/persistence.rb:582:in `_create_record'
+activerecord (5.1.6.1) lib/active_record/counter_cache.rb:178:in `_create_record'
+activerecord (5.1.6.1) lib/active_record/locking/optimistic.rb:69:in `_create_record'
+activerecord (5.1.6.1) lib/active_record/attribute_methods/dirty.rb:297:in `_create_record'
+activerecord (5.1.6.1) lib/active_record/callbacks.rb:340:in `block in _create_record'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:827:in `_run_create_callbacks'
+activerecord (5.1.6.1) lib/active_record/callbacks.rb:340:in `_create_record'
+activerecord (5.1.6.1) lib/active_record/timestamp.rb:95:in `_create_record'
+activerecord (5.1.6.1) lib/active_record/persistence.rb:553:in `create_or_update'
+activerecord (5.1.6.1) lib/active_record/callbacks.rb:336:in `block in create_or_update'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:827:in `_run_save_callbacks'
+activerecord (5.1.6.1) lib/active_record/callbacks.rb:336:in `create_or_update'
+activerecord (5.1.6.1) lib/active_record/persistence.rb:129:in `save'
+activerecord (5.1.6.1) lib/active_record/validations.rb:44:in `save'
+activerecord (5.1.6.1) lib/active_record/attribute_methods/dirty.rb:35:in `save'
+activerecord (5.1.6.1) lib/active_record/transactions.rb:308:in `block (2 levels) in save'
+activerecord (5.1.6.1) lib/active_record/transactions.rb:384:in `block in with_transaction_returning_status'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `block in transaction'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/transaction.rb:194:in `block in within_new_transaction'
+/Users/carla/.rbenv/versions/2.5.3/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/transaction.rb:191:in `within_new_transaction'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `transaction'
+activerecord (5.1.6.1) lib/active_record/transactions.rb:210:in `transaction'
+activerecord (5.1.6.1) lib/active_record/transactions.rb:381:in `with_transaction_returning_status'
+activerecord (5.1.6.1) lib/active_record/transactions.rb:308:in `block in save'
+activerecord (5.1.6.1) lib/active_record/transactions.rb:323:in `rollback_active_record_state!'
+activerecord (5.1.6.1) lib/active_record/transactions.rb:307:in `save'
+activerecord (5.1.6.1) lib/active_record/suppressor.rb:42:in `save'
+devise (4.5.0) app/controllers/devise/registrations_controller.rb:19:in `create'
+actionpack (5.1.6.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.6.1) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.6.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.6.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.6.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.6.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.6.1) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.6.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.6.1) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.6.1) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.6.1) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6.1) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6.1) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6.1) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.1.6.1) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-02 15:46:48 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 71ms (Views: 70.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-01-02 15:52:05 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-01-02 15:52:10 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qZ9fN/v+srV404CEyc9sxH9J6EdSa6/XYx2TS2KazBQ2I3VbJlkIU3LvSfbJ7qszNshIECUzJksOx1xW9cwAGw==", "user"=>{"email"=>"", "age"=>"", "country"=>"AF", "english_p"=>"Low"}, "commit"=>"Next"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "country", "english_p") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2019-01-02 15:52:10.751988"], ["updated_at", "2019-01-02 15:52:10.751988"], ["country", "AF"], ["english_p", 0]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=() already exists.
+: INSERT INTO "users" ("created_at", "updated_at", "country", "english_p") VALUES ($1, $2, $3, $4) RETURNING "id"):
+  
+activerecord (5.1.6.1) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `async_exec'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/postgresql_adapter.rb:616:in `block (2 levels) in exec_no_cache'
+activesupport (5.1.6.1) lib/active_support/dependencies/interlock.rb:46:in `block in permit_concurrent_loads'
+activesupport (5.1.6.1) lib/active_support/concurrency/share_lock.rb:185:in `yield_shares'
+activesupport (5.1.6.1) lib/active_support/dependencies/interlock.rb:45:in `permit_concurrent_loads'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/postgresql_adapter.rb:615:in `block in exec_no_cache'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract_adapter.rb:613:in `block (2 levels) in log'
+/Users/carla/.rbenv/versions/2.5.3/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract_adapter.rb:612:in `block in log'
+activesupport (5.1.6.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract_adapter.rb:604:in `log'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/postgresql_adapter.rb:614:in `exec_no_cache'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/postgresql_adapter.rb:603:in `execute_and_clear'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/postgresql/database_statements.rb:79:in `exec_query'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/database_statements.rb:102:in `exec_insert'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/postgresql/database_statements.rb:113:in `exec_insert'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/database_statements.rb:133:in `insert'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/query_cache.rb:17:in `insert'
+activerecord (5.1.6.1) lib/active_record/relation.rb:61:in `insert'
+activerecord (5.1.6.1) lib/active_record/persistence.rb:582:in `_create_record'
+activerecord (5.1.6.1) lib/active_record/counter_cache.rb:178:in `_create_record'
+activerecord (5.1.6.1) lib/active_record/locking/optimistic.rb:69:in `_create_record'
+activerecord (5.1.6.1) lib/active_record/attribute_methods/dirty.rb:297:in `_create_record'
+activerecord (5.1.6.1) lib/active_record/callbacks.rb:340:in `block in _create_record'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:827:in `_run_create_callbacks'
+activerecord (5.1.6.1) lib/active_record/callbacks.rb:340:in `_create_record'
+activerecord (5.1.6.1) lib/active_record/timestamp.rb:95:in `_create_record'
+activerecord (5.1.6.1) lib/active_record/persistence.rb:553:in `create_or_update'
+activerecord (5.1.6.1) lib/active_record/callbacks.rb:336:in `block in create_or_update'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:827:in `_run_save_callbacks'
+activerecord (5.1.6.1) lib/active_record/callbacks.rb:336:in `create_or_update'
+activerecord (5.1.6.1) lib/active_record/persistence.rb:129:in `save'
+activerecord (5.1.6.1) lib/active_record/validations.rb:44:in `save'
+activerecord (5.1.6.1) lib/active_record/attribute_methods/dirty.rb:35:in `save'
+activerecord (5.1.6.1) lib/active_record/transactions.rb:308:in `block (2 levels) in save'
+activerecord (5.1.6.1) lib/active_record/transactions.rb:384:in `block in with_transaction_returning_status'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `block in transaction'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/transaction.rb:194:in `block in within_new_transaction'
+/Users/carla/.rbenv/versions/2.5.3/lib/ruby/2.5.0/monitor.rb:226:in `mon_synchronize'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/transaction.rb:191:in `within_new_transaction'
+activerecord (5.1.6.1) lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `transaction'
+activerecord (5.1.6.1) lib/active_record/transactions.rb:210:in `transaction'
+activerecord (5.1.6.1) lib/active_record/transactions.rb:381:in `with_transaction_returning_status'
+activerecord (5.1.6.1) lib/active_record/transactions.rb:308:in `block in save'
+activerecord (5.1.6.1) lib/active_record/transactions.rb:323:in `rollback_active_record_state!'
+activerecord (5.1.6.1) lib/active_record/transactions.rb:307:in `save'
+activerecord (5.1.6.1) lib/active_record/suppressor.rb:42:in `save'
+devise (4.5.0) app/controllers/devise/registrations_controller.rb:19:in `create'
+actionpack (5.1.6.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.6.1) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.6.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.6.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.6.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.6.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.6.1) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.6.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.6.1) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.6.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.6.1) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.6.1) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6.1) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6.1) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6.1) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.1.6.1) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6.1) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2019-01-02 15:52:21 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qZ9fN/v+srV404CEyc9sxH9J6EdSa6/XYx2TS2KazBQ2I3VbJlkIU3LvSfbJ7qszNshIECUzJksOx1xW9cwAGw==", "user"=>{"email"=>"cd.saraiva@campus.fct.unl.pt", "age"=>"22", "gender"=>"Female", "country"=>"DZ", "english_p"=>"Low"}, "commit"=>"Next"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "gender", "age", "country", "english_p") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "cd.saraiva@campus.fct.unl.pt"], ["created_at", "2019-01-02 15:52:21.921295"], ["updated_at", "2019-01-02 15:52:21.921295"], ["gender", "Female"], ["age", 22], ["country", "DZ"], ["english_p", 0]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-02 15:52:21 +0000
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+Processing by ExercisesController#video3 as HTML
+  Rendering exercises/video3.html.erb within layouts/application
+  Rendered exercises/video3.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 53ms (Views: 38.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/exercise3" for 127.0.0.1 at 2019-01-02 15:52:55 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Rendered exercises/_pme.html.erb (28.3ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 84ms (Views: 82.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/exercises" for 127.0.0.1 at 2019-01-02 15:53:00 +0000
+Processing by ExercisesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6DPBA7R7p8uvd5q9iZ6JQ74YsoaV531VUefmtzrwIT5VFusZr2rkvwcV90uRyxi8DY85z90EAzBocFqOhXls4A==", "exercise"=>{"arousal"=>"50", "valence"=>"50", "exercise_type"=>"pme", "video_id"=>"3"}, "commit"=>"Next"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "exercises" ("user_id", "exercise_type", "valence", "arousal", "video_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["exercise_type", "pme"], ["valence", 50], ["arousal", 50], ["video_id", 3]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/new
+Completed 302 Found in 26ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/new" for 127.0.0.1 at 2019-01-02 15:53:00 +0000
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for 127.0.0.1 at 2019-01-02 15:54:14 +0000
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 43ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for 127.0.0.1 at 2019-01-02 15:54:16 +0000
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 43ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for 127.0.0.1 at 2019-01-02 15:54:25 +0000
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 52ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for 127.0.0.1 at 2019-01-02 15:54:26 +0000
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2019-01-02 15:54:31 +0000
+Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bALS+A/SpKWQE7DibCPSX73p0LIqmk1ukh/SCLwX44LzvviU0nUeQ5oveZBsAhWo9Ghw5V3CxPL/xR0VK0EvjQ==", "survey"=>{"feedback"=>""}, "commit"=>"Next"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 67ms (Views: 46.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/create" for 127.0.0.1 at 2019-01-02 15:54:33 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/create"):
+  
+actionpack (5.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6.1) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/new" for 127.0.0.1 at 2019-01-02 15:54:39 +0000
+Processing by SurveysController#new as HTML
+  Rendering surveys/new.html.erb within layouts/application
+  Rendered surveys/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 51ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercise3" for 127.0.0.1 at 2019-01-02 15:54:47 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Rendered exercises/_pme.html.erb (5.1ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/exercise3" for 127.0.0.1 at 2019-01-02 15:54:51 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Rendered exercises/_pme.html.erb (5.7ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/exercise3" for 127.0.0.1 at 2019-01-02 15:55:06 +0000
+Processing by ExercisesController#exercise3 as HTML
+  Rendering exercises/exercise2.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Rendered exercises/_pme.html.erb (6.4ms)
+  Rendered exercises/exercise2.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.3ms)
+
+

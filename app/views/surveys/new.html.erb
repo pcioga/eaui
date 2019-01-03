@@ -20,7 +20,7 @@
 
  <div class="form-group">   
       <b><%= f.label :feedback, "In your opinion, what were the sliders measuring?" %>&nbsp;&nbsp;&nbsp;&nbsp;<%= image_tag "sliders.png", class: "style_image_sliders"%><br /></b>
-      
+
       <%= f.text_area :feedback, class: "style_textarea" %>
       </div>
       
@@ -28,7 +28,9 @@
       <br>
           <br>
     <br>
-      <%= f.submit "Submit" %>
+        <div class="form-group">
+      <%= f.submit "Next" %>
+    </div>
     <% end %>
   </div>
 </div>
